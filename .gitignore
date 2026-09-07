@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.npm/
+
+# Rust / Tauri build artifacts
+src-tauri/target/
+target/
+
+# Frontend build output
+dist/
+build/
+out/
+coverage/
+.test-dist/
+.smoke-appdata/
+artifacts/
+release/
+
+# Vite temporary timestamp files
+*.timestamp-*.mjs
+*.tsbuildinfo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+/settings.json
+/settings.invalid-*.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Scratch directory
+scratch/
+
+# Logs
+*.log
+src-tauri/run.log
+
+# OS files
+.DS_Store
+Thumbs.db
+*.lnk
+*.exe
+
+# AI agent config
+.agents/
+.hermes/
+
+# Tauri auto-generated schemas (recreated on build)
+src-tauri/gen/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Packaged installers belong in GitHub Releases
+*.msi
+*.msix
+*.dmg
+*.AppImage
+*.deb
+*.rpm
