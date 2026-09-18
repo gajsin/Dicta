@@ -1,0 +1,116 @@
+/* Dicta Design System - Compact Precision Desktop (Linear / Attio / Vercel / Raycast) */
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  /* Typography Stack */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI Variable Text', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Cascadia Code', 'SF Mono', Consolas, Menlo, monospace;
+  --sidebar-width: 190px;
+  --content-top: 48px;
+  --control-height: 30px;
+
+  /* Radii: Crisp Vercel / Linear desktop geometry (strict 4px standard) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-card: 4px;
+
+  /* Semantic Accent Tokens */
+  --accent-primary: var(--accent-color, #FFC400);
+  --accent-soft: var(--accent-light, rgba(255, 196, 0, 0.12));
+  --accent-subtle: var(--accent-subtle-token, rgba(255, 196, 0, 0.14));
+  --accent-border: var(--accent-glow, rgba(255, 196, 0, 0.24));
+  --accent-foreground: #FFFFFF;
+  --accent-hover: var(--accent-hover-color, #E5B000);
+}
+
+/* Light Theme - Clean Precision (Linear / Attio / Vercel / Raycast) */
+.theme-light, :root:not(.theme-dark) {
+  --bg-app: #FFFFFF;
+  --bg-sidebar: #FFFFFF;
+  --bg-surface: #FFFFFF;
+  --bg-surface-raised: #FFFFFF;
+  --bg-floating: #FFFFFF;
+  --bg-control: #FFFFFF;
+  --bg-muted: #F3F4F6;
+
+  --hover-bg: rgba(0, 0, 0, 0.04);
+  --hover-surface: #F3F4F6;
+  --bg-hover: rgba(0, 0, 0, 0.03);
+
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-tertiary: #9CA3AF;
+
+  --border-color: rgba(0, 0, 0, 0.12);
+  --border-control: rgba(0, 0, 0, 0.10);
+  --border-subtle: rgba(0, 0, 0, 0.09);
+  --border-strong: rgba(0, 0, 0, 0.18);
+  --border-focus: #111827;
+
+  --success-color: #059669;
+  --danger-color: #DC2626;
+
+  --shadow-lg: 0 12px 28px -4px rgba(0, 0, 0, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Dark Theme - Quiet Precision */
+.theme-dark {
+  --bg-app: #0D1010;
+  --bg-sidebar: #0D1010;
+  --bg-surface: #101111;
+  --bg-surface-raised: #171919;
+  --bg-floating: #141616;
+  --bg-control: #202323;
+  --bg-muted: #242626;
+
+  --hover-bg: rgba(255, 255, 255, 0.05);
+  --hover-surface: #242626;
+  --bg-hover: rgba(255, 255, 255, 0.04);
+
+  --text-primary: #F0F1F1;
+  --text-secondary: #B0B7BE;
+  --text-tertiary: #899199;
+
+  --border-color: #303435;
+  --border-control: #292D2E;
+  --border-subtle: #262A2B;
+  --border-strong: #414647;
+  --border-focus: #B5BDC4;
+
+  --success-color: #10B981;
+  --danger-color: #EF4444;
+
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  background: var(--bg-app);
+  color: var(--text-primary);
+  transition: background-color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Emil Kowalski: Tactile feedback on press for pressable elements */
+button:active:not(:disabled),
+.clickable:active {
+  transform: scale(0.97);
+  transition: transform 80ms ease-out;
+}
